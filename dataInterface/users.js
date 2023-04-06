@@ -5,8 +5,9 @@ const auth = require('../auth');
 const mongoDBPassword = process.env.PASSWORD;
 const mongoDBPORT = process.env.PORT;
 // uri is from mongodb account > Connect > Connect your app > Driver: Node
+// !! NEED TO SET UP SEPARATE USER FOR READ/WRITE, POSSIBLY SEPARATE ACCESS URI VARIABLES FOR ADMIN VS. NORMAL USERS !!
 const uri = 
-  `mongodb+serv://admin:${mongoDBPassword}@cluster0.${mongoDBPORT}.mongodb.net/?retryWrites=true&w=majority`;
+  `mongodb+srv://admin:${mongoDBPassword}@cluster0.${mongoDBPORT}.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri);
 
