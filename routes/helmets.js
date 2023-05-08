@@ -12,7 +12,6 @@ router.get('/', async (req, res) => {
 
   if (Object.keys(req.query).length === 0) {
     result = await helmetData.getAllHelmets();
-    console.log('reached query await');
     console.log(`result: ${result}`)
   } else {
     let state = req.query.state.toUpperCase();

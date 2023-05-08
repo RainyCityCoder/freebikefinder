@@ -4,11 +4,10 @@ const ObjectId = require('mongodb').ObjectId;
 const mongoDBPassword = process.env.PASSWORD;
 const mongoDBPORT = process.env.MONGODBPORT;
 const mongoDBUsernameOne = process.env.USERNAMEONE;
-// uri is from mongodb account > Connect > Connect your app > Driver: Node
-const uri = 
-`mongodb+srv://${mongoDBUsernameOne}:${mongoDBPassword}@cluster0.${mongoDBPORT}.mongodb.net/?retryWrites=true&w=majority`;
+// uri is from mongodb account > Connect > Drivers > Driver: Node.js
+const uri = `mongodb+srv://${mongoDBUsernameOne}:${mongoDBPassword}@cluster0.${mongoDBPORT}.mongodb.net/?retryWrites=true&w=majority`;
 
-const client = new MongoClient(uri);
+const client = new MongoClient(uri); 
 
 const databaseName = 'free-bike-finder';
 const collName = 'helmets';
@@ -22,7 +21,6 @@ module.exports = {};
 module.exports.getAllHelmets = async () => {
   const query = {};
   let cursor = await helmetData.find(query);
-  console.log('reached mongo-reach-out await');
   return cursor.toArray();
 };
 

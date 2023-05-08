@@ -124,7 +124,7 @@ The API returns data in a standard JSON format.
    1. Example input: :warning:`*LINK HERE*/nonprofits/6301a9c35051f0576dc895a3`
    2. Example output:
       `{"_id":"6301a9c35051f0576dc895a3","website":"https://bikechurch.santacruzhub.org/","name":"Bike Church","state":"CA","address":"1234 Main Street, Anytown, NC 12345","phone":"","email":"postmaster@santacruzhub.org","contact_form":"","facebook":"","twitter":"","instagram":"","cost":"","bikes":"TRUE","helmets":"","maintenance":"TRUE","tools":"TRUE","classes":"?","suggested_donation":"","volunteering":"","donate_bikes":"","target_client":""}`
-3. All organizations in a particular state: :warning:`*LINK HERE*/nonprofits?state=<state_abbreviation>`
+3. All organizations in a particular state: :warning:`*LINK HERE*/nonprofits?state=<state_postal_abbreviation>`
    1. Example input: :warning:`*LINK HERE*/nonprofits?state=ca`
    2. Example output (truncated):
       `[{"_id":"6301a9c35051f0576dc895a3","website":"https://bikechurch.santacruzhub.org/","name":"Bike Church","state":"CA","address":"1234 Main Street, Anytown, NC 12345","phone":"","email":"postmaster@santacruzhub.org","contact_form":"","facebook":"","twitter":"","instagram":"","cost":"","bikes":"TRUE","helmets":"","maintenance":"TRUE","tools":"TRUE","classes":"?","suggested_donation":"","volunteering":"","donate_bikes":"","target_client":""},{"_id":"6301a9c35051f0576dc895a2","website":"https://bikeslocounty.org/","name":"Bike Slo County ","state":"CA","address":"1234 Main Street, Anytown, NC 12345","phone":"","email":"rick@bikeslocounty.org","contact_form":"","facebook":"","twitter":"","instagram":"","cost":"Earn","bikes":"TRUE","helmets":"TRUE","maintenance":"TRUE","tools":"TRUE","classes":"TRUE","suggested_donation":"","volunteering":"","donate_bikes":"","target_client":""}, ... ]`
@@ -137,10 +137,12 @@ To run this code locally:
 - Clone the code to your local environment
 - Run `npm install` in the root project directory
 - You will likely have to run `npm install bcrypt jest supertest` in the root directory, and `npm install react-scripts` in the `./app` directory for full functionality
+  - To make life easier on yourself, installing nodemon with `npm install --save-dev nodemon` will allow hot-restarts of your server as you change the code
+- If you're using MongoDB, install the MongoDB Node driver with `npm install mongodb@4.8.1` in the root project directory (earlier versions may not work)
 
-You may run the back-end service with any of the following terminal commands, from the root of the project.
+You may run the back-end service with one or more of the following terminal commands, from the root of the project.
 
-- `npm run startDev`
+- `npm run startDev` (nodemon must be installed)
 - `npm run start`
 - `npm start`
 - `node index.js`
@@ -156,10 +158,8 @@ The tests may be run with `npm run test` or `npm run <testfile>` from the `./rou
 ## Tech Stack
 
 - Node.js:
-  - React.js front-end
-  - Express.js API
-- :warning: React app hosted on _HOST HERE_
-- :warning: Express code hosted on _HOST HERE_
+  - :warning:React.js front-end _HOST HERE_
+  - :warning:Express.js API _HOST HERE_
 - Database: MongoDB
 - Testing: Jest, Supertest
 - Open source: available on [GitHub](https://github.com/RainyCityCoder/freebikefinder)
@@ -167,6 +167,6 @@ The tests may be run with `npm run test` or `npm run <testfile>` from the `./rou
 ## Original project credits:
 
 - [RainyCityCoder](https://github.com/RainyCityCoder): Product Manager, API Developer, co-Project Manager (Agile)
-- :warning:_TeammateOne_: React Developer, co-Project Manager (Agile)
-- :warning:_TeammateTwo_: Database Administration
-- :warning:_TeammateThree_: Tests/QA Engineer
+- [Ryan O'Donnell](https://www.linkedin.com/in/josephryanodonnell/): React Developer, co-Project Manager (Agile)
+- [Amber Bandasith](https://www.linkedin.com/in/amber-bandasith-4436525a/): Database Administration
+- Sonal Gupta: Test/QA Engineer

@@ -3,7 +3,8 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './Components/Home';
 import Shops from './Components/Shops';
 import Shop from './Components/Shop';
-import Login from './Components/Login';
+// Commenting out login(s) until I decide how to handle user account. Check below for commented-out route path.
+// import Login from './Components/Login';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -44,7 +45,8 @@ export default function App() {
           <Route path='/shop/:id' element={<Shop asset='shops' />} />
           <Route path='/helmet/:id' element={<Shop asset='helmets' />} />
           <Route path='/nonprofit/:id' element={<Shop asset='nonprofits' />} />
-          <Route path='/login' element={<Shop asset='nonprofits' />} />
+          {/* Commenting out login(s) until I decide how to handle user account. */}
+          {/* <Route path='/login' element={<Shop asset='nonprofits' />} /> */}
         </Routes>
       </div>
     </Container>
