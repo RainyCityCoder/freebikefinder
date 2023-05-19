@@ -49,6 +49,9 @@ export default function App() {
           {/* <Route path='/login' element={<Shop asset='nonprofits' />} /> */}
         </Routes>
       </div>
+      <div>
+        <p className="fw-lighter">This code is open-sourced <a className="fs-6" href="https://github.com/RainyCityCoder/freebikefinder">on Github.</a></p>
+      </div>
     </Container>
   );
 }
