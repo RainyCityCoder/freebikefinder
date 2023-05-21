@@ -1,13 +1,16 @@
 const { MongoClient } = require('mongodb');
 const ObjectId = require('mongodb').ObjectId;
 
-// uri is from mongodb account > Connect > Connect your app > Driver: Node
-const uri =
-  'mongodb+srv://superuser:4IYc1f1LQtmvDELv@cluster0.mwyfrof.mongodb.net/?retryWrites=true&w=majority';
+const mongoDBPassword = process.env.PASSWORD;
+const mongoDBPORT = process.env.MONGODBPORT;
+const mongoDBUsernameOne = process.env.USERNAMEONE;
+// uri is from mongodb account > Connect > Drivers > Driver: Node.js
 
-const client = new MongoClient(uri);
+const uri = `mongodb+srv://${mongoDBUsernameOne}:${mongoDBPassword}@cluster0.${mongoDBPORT}.mongodb.net/?retryWrites=true&w=majority`;
 
-const databaseName = 'free-bike-finder';
+const client = new MongoClient(uri); 
+
+const databaseName = 'freebikefinder';
 const collName = 'helmets';
 
 const database = client.db(databaseName);

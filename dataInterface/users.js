@@ -2,8 +2,12 @@ const { MongoClient } = require('mongodb');
 const bcrypt = require('bcryptjs');
 const auth = require('../auth');
 
-const uri =
-  'mongodb+srv://superuser:4IYc1f1LQtmvDELv@cluster0.mwyfrof.mongodb.net/?retryWrites=true&w=majority';
+const mongoDBPassword = process.env.PASSWORD;
+const mongoDBPORT = process.env.PORT;
+// uri is from mongodb account > Connect > Connect your app > Driver: Node
+// !! NEED TO SET UP SEPARATE USER FOR READ/WRITE, POSSIBLY SEPARATE ACCESS URI VARIABLES FOR ADMIN VS. NORMAL USERS !!
+const uri = 
+  `mongodb+srv://admin:${mongoDBPassword}@cluster0.${mongoDBPORT}.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri);
 
