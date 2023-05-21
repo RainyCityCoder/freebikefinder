@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/bandasitha/freebikefinder.git"
+    "url": "git+https://github.com/rainycitycoder/freebikefinder.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bandasitha/freebikefinder/issues"
+    "url": "https://github.com/rainycitycoder/freebikefinder/issues"
   },
-  "homepage": "https://github.com/bandasitha/freebikefinder#readme",
+  "homepage": "https://github.com/rainycitycoder/freebikefinder#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "bcryptjs": "^2.4.3",
