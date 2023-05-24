@@ -2,7 +2,6 @@ const { Router } = require('express');
 const router = Router();
 const userData = require('../dataInterface/users');
 
-// curl -X POST -H "Content-Type: application/json" -d '{"email": "admin@test.com", "password": "password"}' http://localhost:8000/users/login
 router.post('/login', async (req, res) => {
   let resultStatus;
   let result = await userData.findByCredentials(req.body);
@@ -20,7 +19,6 @@ router.post('/login', async (req, res) => {
   res.status(resultStatus).send(result);
 });
 
-// curl -X POST -H "Content-Type: application/json" -d '{"name": "test", "email": "test@test.com", "password": "password"}' http://localhost:8000/users/register
 router.post('/register', async (req, res) => {
   let resultStatus;
   let result = await userData.create(req.body);

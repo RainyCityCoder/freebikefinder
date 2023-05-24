@@ -4,7 +4,6 @@ const ObjectId = require('mongodb').ObjectId;
 const mongoDBPassword = process.env.PASSWORD;
 const mongoDBPORT = process.env.MONGODBPORT;
 const mongoDBUsernameOne = process.env.USERNAMEONE;
-// uri is from mongodb account > Connect > Drivers > Driver: Node.js
 
 const uri = `mongodb+srv://${mongoDBUsernameOne}:${mongoDBPassword}@cluster0.${mongoDBPORT}.mongodb.net/?retryWrites=true&w=majority`;
 
