@@ -14,8 +14,8 @@ export default function Shops({ asset }) {
   const { state } = useParams();
 
     const endpoint = state
-    ? `https://freebikefinder.onrender.com/${asset}?state=${state}`
-    : `https://freebikefinder.onrender.com/${asset}`;
+    ? `backEndAPI/${asset}?state=${state}`
+    : `backEndAPI/${asset}`;
 
   useEffect(() => {
     fetch(endpoint)
