@@ -3,11 +3,13 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Modal from 'react-bootstrap/Modal';
 
+const backEndAPI = process.env.BACKENDURL;
+
 export default function Login() {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    fetch('https://freebikefinder.herokuapp.com/users/login', {
+    fetch('backEndAPI/users/login', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: { email: e.target.email, password: e.target.password },
