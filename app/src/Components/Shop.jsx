@@ -10,7 +10,7 @@ export default function Shop({ asset }) {
   const [shop, setShop] = useState([]);
 
   useEffect(() => {
-    fetch(`backEndAPI/${asset}/${id}`)
+    fetch(`https://freebikefinder.onrender.com/${asset}/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setShop(data);
