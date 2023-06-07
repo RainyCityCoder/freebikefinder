@@ -3,14 +3,13 @@ import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Shop.css';
 
-const backEndAPI = process.env.BACKENDURL;
 
 export default function Shop({ asset }) {
   const { id } = useParams();
   const [shop, setShop] = useState([]);
 
   useEffect(() => {
-    fetch(`backEndAPI/${asset}/${id}`)
+    fetch(`https://freebikefinder.onrender.com/${asset}/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setShop(data);
