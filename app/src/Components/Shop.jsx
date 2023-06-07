@@ -3,20 +3,13 @@ import { useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './Shop.css';
 
+
 export default function Shop({ asset }) {
   const { id } = useParams();
   const [shop, setShop] = useState([]);
 
-  // useEffect(() => {
-  //   fetch(`https://freebikefinder.herokuapp.com/${asset}/${id}`)
-  //     .then((response) => response.json())
-  //     .then((data) => {
-  //       setShop(data);
-  //     });
-  // }, [asset, id]);
-
   useEffect(() => {
-    fetch(`http://localhost:8000/${asset}/${id}`)
+    fetch(`https://freebikefinder.onrender.com/${asset}/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setShop(data);

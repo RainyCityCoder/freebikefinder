@@ -6,18 +6,15 @@ import ShopCard from './ShopCard';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
+
 export default function Shops({ asset }) {
   const [shops, setShops] = useState([]);
 
   const { state } = useParams();
 
-  // const endpoint = state
-  //   ? `https://APPNAME GO HERE/${asset}?state=${state}`
-  //   : `https://APPNAME GO HERE/${asset}`;
-
     const endpoint = state
-    ? `http://localhost:8000/${asset}?state=${state}`
-    : `http://localhost:8000/${asset}`;
+    ? `https://freebikefinder.onrender.com/${asset}?state=${state}`
+    : `https://freebikefinder.onrender.com/${asset}`;
 
   useEffect(() => {
     fetch(endpoint)
