@@ -8,7 +8,7 @@ export default function Home() {
     <Container className='hero'>
       <h1 className='hero-text'>Everyone deserves reliable transportation</h1>
       <p>
-        <Button href='/shops' Style='primary' size='lg'>
+        <Button className='border border-white border-2' href='/shops' Style='primary' size='lg'>
           Find yourself a bike!
         </Button>
       </p>

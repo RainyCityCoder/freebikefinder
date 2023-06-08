@@ -25,8 +25,8 @@ export default function Shops({ asset }) {
   }, [endpoint]);
 
   return (
-    <Container>
-      <Row>
+    <Container className='container px-4'>
+      <Row className='row gx-1 justify-content-evenly'>
         {shops.map((shop, index) => {
           return (
             <ShopCard

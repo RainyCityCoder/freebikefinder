@@ -13,15 +13,15 @@ import Navbar from 'react-bootstrap/Navbar';
 export default function App() {
   return (
     <Container>
-      <Navbar bg='light' expand='lg' sticky='top'>
+      <Navbar bg='light' expand='md' sticky='top'>
         <Container>
           <Navbar.Brand href='/'>Home</Navbar.Brand>
           <Navbar.Toggle aria-controls='basic-navbar-nav' />
           <Navbar.Collapse id='basic-navbar-nav'>
             <Nav className='ms-auto'>
-              <Nav.Link href='/shops'>Bikes</Nav.Link>
-              <Nav.Link href='/helmets'>Helmets</Nav.Link>
-              <Nav.Link href='/nonprofits'>Nonprofits</Nav.Link>
+              <Nav.Link className='active fw-bold' href='/shops'>Bikes</Nav.Link>
+              <Nav.Link className='active fw-bold' href='/helmets'>Helmets</Nav.Link>
+              <Nav.Link className='active fw-bold' href='/nonprofits'>Nonprofits</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -49,8 +49,11 @@ export default function App() {
           {/* <Route path='/login' element={<Shop asset='nonprofits' />} /> */}
         </Routes>
       </div>
-      <div>
-        <p className="fw-lighter">This code is open-sourced <a className="fs-6" href="https://github.com/RainyCityCoder/freebikefinder">on Github.</a></p>
+      <div className='mx-auto my-2'>
+        <p className='text-center'>Please be patient; this website and database are hosted with free-tier accounts, and may experience short delays.</p>
+      </div>
+      <div className='mx-auto my-4'>
+        <p className="fw-lighter text-center">This code is open-sourced <a className="fs-6" href="https://github.com/RainyCityCoder/freebikefinder">on Github.</a></p>
       </div>
     </Container>
   );

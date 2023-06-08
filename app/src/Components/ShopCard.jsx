@@ -13,10 +13,10 @@ export default function ShopCard({
   asset,
 }) {
   return (
-    <Card style={{ width: '18rem' }}>
+    <Card className='m-1' style={{ width: '18rem' }}>
       <Card.Header>
         {
-          <Card.Title>
+          <Card.Title className='text-center'>
             <a href={`../${asset.slice(0, -1)}/${shopId}`}>{shopName}</a>
           </Card.Title>
         }
