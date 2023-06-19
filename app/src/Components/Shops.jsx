@@ -20,6 +20,11 @@ export default function Shops({ asset }) {
     fetch(endpoint)
       .then((response) => response.json())
       .then((data) => {
+        data.sort(((a, b) => {
+          if(a.state < b.state) {return -1; }
+          if(a.state > b.state) {return 1; }
+          return 0;
+        }));
         setShops(data);
       });
   }, [endpoint]);
@@ -46,5 +51,5 @@ export default function Shops({ asset }) {
 }
 
 Shops.propTypes = {
-  title: PropTypes.string.isRequired,
+  asset: PropTypes.string.isRequired,
 };
