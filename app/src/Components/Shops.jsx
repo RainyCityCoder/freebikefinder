@@ -48,8 +48,8 @@ export default function Shops({ asset }) {
       </Row>
     </Container>
   );
-}
+} 
 
-Shops.propTypes = {
-  asset: PropTypes.string.isRequired,
-};
+//Shops.propTypes = {
+//  asset: PropTypes.string.isRequired,
+//};
