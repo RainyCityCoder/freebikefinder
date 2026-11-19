@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import './Shop.css';
+
 
 export default function Shop({ asset }) {
   const { id } = useParams();
   const [shop, setShop] = useState([]);
-  const API_URL = process.env.API_URL;
 
   useEffect(() => {
-    fetch(`${API_URL}/${asset}/${id}`)
+    fetch(`https://freebikefinder.onrender.com/${asset}/${id}`)
       .then((response) => response.json())
       .then((data) => {
         setShop(data);
@@ -28,4 +29,6 @@ export default function Shop({ asset }) {
   );
 }
 
-
+Shop.propTypes = {
+  asset: PropTypes.string.isRequired,
+};
