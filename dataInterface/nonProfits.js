@@ -2,11 +2,11 @@ const { MongoClient } = require('mongodb');
 const ObjectId = require('mongodb').ObjectId;
 
 const mongoDBPassword = process.env.PASSWORD;
-const mongoDBPORT = process.env.MONGODBPORT;
+const mongoDBCLUSTER = process.env.MONGODBCLUSTER;
 const mongoDBUsernameOne = process.env.USERNAMEONE;
+const encodedUsername = encodeURIComponent(mongoDBUsernameOne);
 // uri is from mongodb account > Connect > Connect your app > Driver: Node
-const uri = `mongodb+srv://${mongoDBUsernameOne}:${mongoDBPassword}@cluster0.${mongoDBPORT}.mongodb.net/?retryWrites=true&w=majority`;
-
+const uri = `mongodb+srv://${encodedUsername}:${mongoDBPassword}@cluster0.${mongoDBCLUSTER}.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri);
 
