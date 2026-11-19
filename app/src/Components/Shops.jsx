@@ -5,10 +5,11 @@ import ShopCard from './ShopCard';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
+const API_URL = process.env.API_URL;
+
 export default function Shops({ asset }) {
   const [shops, setShops] = useState([]);
   const { state } = useParams();
-  const API_URL = process.env.API_URL;
 
   const endpoint = state
     ? `${API_URL}/${asset}?state=${state}`

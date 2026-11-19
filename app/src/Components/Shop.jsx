@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './Shop.css';
 
+const API_URL = process.env.API_URL;
+
 export default function Shop({ asset }) {
   const { id } = useParams();
   const [shop, setShop] = useState([]);
-  const API_URL = process.env.API_URL;
 
   useEffect(() => {
     fetch(`${API_URL}/${asset}/${id}`)
