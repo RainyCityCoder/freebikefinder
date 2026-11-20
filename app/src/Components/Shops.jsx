@@ -5,7 +5,7 @@ import ShopCard from './ShopCard';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 
-const API_URL = process.env.API_URL;
+const API_URL = process.env.REACT_APP_API_URL;
 
 export default function Shops({ asset }) {
   const [shops, setShops] = useState([]);
